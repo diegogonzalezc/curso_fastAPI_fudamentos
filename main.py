@@ -35,7 +35,7 @@ def create_funtion(persona: Person= Body(...)):
 
 #validations: query parameters
 
-app.get('/person/detail')
+@app.get('/person/detail')
 def show_person(
     name: Optional[str] = Query(None, min_length=1, max_length=50),
     age: str = Query(...) 
